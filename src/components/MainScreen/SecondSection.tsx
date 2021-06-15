@@ -1,7 +1,13 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import img from "../../img/mainCompose/LetsBIMprove_PaidCoursesLogo_01 1.png";
 import img2 from "../../img/mainCompose/LetsBIMprove_PaidCoursesLogo_01 2.png";
 export const SecondSection: React.FC = () => {
+  const history = useHistory();
+  const pushHandler = (link: string) => {
+    history.push(link);
+    return;
+  };
   return (
     <div className="second-section">
       <div className="bg-lock"></div>
@@ -14,7 +20,12 @@ export const SecondSection: React.FC = () => {
               для впевненного старту як{" "}
               <span className="bold-wrap">BIM спеціаліст</span>.
             </p>
-            <div className="btn-wrapper-main">
+            <div
+              className="btn-wrapper-main"
+              onClick={() => {
+                pushHandler("/revit");
+              }}
+            >
               <p>Курс</p>
 
               <h4>Revit</h4>

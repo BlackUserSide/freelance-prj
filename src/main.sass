@@ -4,12 +4,13 @@ body
     margin: 0
     background: #EFEFEF
     font-family: 'Roboto', sans-serif
+
 h1, h2,h3,h4,h5,h6,p
     margin: 0
 .fixed-container
     position: fixed
-    bottom: 70px
-    right: 104px
+    bottom: 5%
+    right: 5%
     max-height: 1080px
     z-index: 999
     .massege-wrapper
@@ -44,6 +45,9 @@ h1, h2,h3,h4,h5,h6,p
     display: flex
     flex-direction: row
     position: relative
+    overflow-y: hidden
+    max-height: 1080px
+    overflow-x: hidden
     .first-section
         max-width: 35.3%
         padding-top: 50px
@@ -222,6 +226,14 @@ h1, h2,h3,h4,h5,h6,p
             width: 40%
             img
                 width: 100%
+    .line-wrapper
+        width: 80%
+        background-color: #fff
+        height: 3px
+        position: relative
+        z-index: 2
+        top: 10%
+        left: 15%
     .base-wrapper
         .container-revit
             position: relative
