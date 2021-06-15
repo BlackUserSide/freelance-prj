@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
 body
     position: relative
     margin: 0
     background: #EFEFEF
+    font-family: 'Roboto', sans-serif
+h1, h2,h3,h4,h5,h6,p
+    margin: 0
 .fixed-container
     position: fixed
     bottom: 70px
     right: 104px
+    max-height: 1080px
+    z-index: 999
     .massege-wrapper
         display: inline-block
         background: #fff
@@ -33,3 +39,267 @@ body
                         width: 70px
                         &:hover
                             border: 5px solid #00F3F3
+
+.main-screen
+    display: flex
+    flex-direction: row
+    position: relative
+    .first-section
+        max-width: 35.3%
+        padding-top: 50px
+        position: relative
+
+        .logo-wrapper
+            background: url('./img/Subtract.png')
+            background-size: cover
+            width: 545px
+            position: relative
+            z-index: 2
+            .logo-image
+                position: relative
+                left: 10%
+.contact-center
+    height: 100vh
+    position: relative
+    width: 100%
+    .bg-lock
+        position: absolute
+        z-index: 1
+        background: url('./img/bg2.png')
+        width: 544px
+        height: 1068px
+        background-size: cover
+        transform: skew(-1deg)
+        top: -238px
+        right: 6px
+    .text-composition
+        padding-top: 10px
+        position: relative
+        float: right
+        z-index: 2
+        right: 10px
+        color: #fff
+        width: 100%
+        text-align: right
+        .top-line
+            .h2
+                display: inline-block
+                font-size: 22px
+                font-weight: 700
+                line-height: 30px
+                margin-bottom: 10px
+        .contanct
+            display: flex
+            flex-direction: column
+            position: relative
+            left: 47%
+            text-align: left
+            a
+                display: inline-block
+                color: #fff
+                text-decoration: none
+                margin-bottom: 10px
+        .name-wrapper
+            display: inline-block
+            font-size: 18px
+            font-weight: 700
+            position: relative
+            right: 20%
+            margin-bottom: 20px
+        .line-in-composition
+            background: #fff
+            width: 300px
+            height: 3px
+            position: relative
+            left: 33%
+            margin-bottom: 10px
+        .soc-composition
+            padding-right: 18%
+            .h2
+                display: inline-block
+            ul
+                list-style-type: none
+                li
+                    display: flex
+                    justify-content: flex-end
+                    margin-bottom: 40px
+                    &:nth-child(2)
+                        a
+                            right: 20%
+                    &:nth-child(3)
+                        a
+                            right: 35%
+                    &:nth-child(4)
+                        a
+                            right: 50%
+                    a
+                        display: flex
+                        align-items: center
+                        color: #fff
+                        text-decoration: none
+                        font-size: 22px
+                        position: relative
+                        img
+                            display: inline-block
+                            margin-left: 20px
+.second-section
+    width: 55%
+    position: relative
+    .bg-lock
+        background: #1E1E1E
+        width: 100%
+        height: 1080px
+        position: absolute
+        z-index: 1
+        transform: skew(-26deg)
+        right: 4%
+        top: 0
+    .revit-composition
+        display: flex
+        align-items: center
+        .container-revit
+            position: relative
+            z-index: 2
+            display: flex
+            left: 27%
+            .text-composition
+                padding-top: 70px
+                width: 40%
+                color: #fff
+                display: flex
+                flex-direction: column
+                .main-text-wrapper
+                    font-size: 18px
+                    font-weight: 300
+                    margin-bottom: 15px
+                .bold-wrap
+                    font-weight: 700
+                .btn-wrapper-main
+                    background: url('./img/mainCompose/bg.png')
+                    background-size: cover
+                    width: 300px
+                    height: 130px
+                    position: relative
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    cursor: pointer
+                    left: -12%
+                    transition: all .3s ease
+                    &:hover
+                        background: url('./img/mainCompose/bgActive.png')
+                        p
+                            color: #000
+                            &::after
+                                background: #000
+                    p
+                        display: inline-block
+                        font-weight: 700
+                        font-size: 24px
+                        text-transform: uppercase
+                        padding-bottom: 5px
+                        position: relative
+                        left: -4.25%
+                        &::after
+                            content: ''
+                            position: absolute
+                            left: 0
+                            bottom: 0
+                            background-color: #fff
+                            width: 140%
+                            height: 3px
+
+                    h4
+                        display: inline-block
+                        color: #00F3F3
+                        font-size: 32px
+                        padding-top: 5px
+                        left: -3%
+                        position: relative
+                        text-transform: uppercase
+        .image-wrapper
+            width: 40%
+            img
+                width: 100%
+    .base-wrapper
+        .container-revit
+            position: relative
+            z-index: 2
+            display: flex
+            left: 2%
+            padding-top: 170px
+            .text-composition
+
+                width: 40%
+                color: #fff
+                display: flex
+                flex-direction: column
+                .main-text-wrapper
+                    font-size: 18px
+                    font-weight: 300
+                    margin-bottom: 15px
+                .bold-wrap
+                    font-weight: 700
+                .btn-wrapper-main
+                    background: url('./img/mainCompose/bg1.png')
+                    background-size: cover
+                    width: 300px
+                    height: 130px
+                    position: relative
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    cursor: pointer
+                    left: -12%
+                    transition: all .3s ease
+                    &:hover
+                        background: url('./img/mainCompose/bg1Active.png')
+                        p
+                            color: #000
+                            &::after
+                                background: #000
+                    p
+                        display: inline-block
+                        font-weight: 700
+                        font-size: 24px
+                        text-transform: uppercase
+                        padding-bottom: 5px
+                        position: relative
+                        left: -4.25%
+                        &::after
+                            content: ''
+                            position: absolute
+                            left: 0
+                            bottom: 0
+                            background-color: #fff
+                            width: 140%
+                            height: 3px
+
+                    h4
+                        display: inline-block
+                        color: #00F3F3
+                        font-size: 32px
+                        padding-top: 5px
+                        left: -3%
+                        position: relative
+                        text-transform: uppercase
+        .image-wrapper
+            width: 40%
+            img
+                position: relative
+                left: -11%
+                width: 100%
+@media screen and ( max-width: 1450px )
+    .contact-center
+        .bg-lock
+            position: absolute
+            z-index: 1
+            background: url('./img/bg2.png')
+            width: 544px
+            height: 1038px
+            background-size: cover
+            transform: skew(-1deg)
+            top: -256px
+            right: -41px
