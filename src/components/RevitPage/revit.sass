@@ -103,12 +103,45 @@
 .about-component
     padding-top: 180px
     overflow-x: hidden
+    overflow-y: hidden
     .about-container
         display: flex
         flex-direction: row
+
         .text-composition
             padding-left: 150px
             width: 30%
+            position: relative
+
+            .container-absolute
+                position: absolute
+                top: 20%
+                right: -12%
+
+                .bg-wrapp
+                    width: 363px
+                    height: 238px
+                    background: url('../../img/bg11.png')
+                    position: absolute
+                    z-index: 10
+                    &:hover
+                        background: url('../../img/bg11Active.png')
+                .white
+                    color: #fff
+                .h2
+                    font-size: 96px
+                    position: relative
+                    left: 100%
+                    top: 20%
+                    font-weight: 700
+                    z-index: 11
+                .h2-second
+                    font-size: 96px
+                    position: relative
+                    left: 70%
+                    top: 0
+                    font-weight: 700
+                    z-index: 11
             .logo-about
                 .h1
                     font-size: 48px
@@ -157,16 +190,18 @@
                 position: absolute
                 width: 1600px
                 background: #1E1E1E
-                transform: skew(-30deg)
-                right: -800px
+                transform: skew(-15deg)
+                right: -920px
                 top: -200px
                 height: 1160px
+                z-index: 11
             .animation-wrapper
                 position: absolute
-                z-index: 3
+                z-index: 12
                 left: 40%
                 top: 8%
                 img
                     width: 520px
 
 .learn-plan
+    position: relative

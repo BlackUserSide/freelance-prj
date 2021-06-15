@@ -1,10 +1,30 @@
 import React from "react";
+import { useState } from "react";
 import anim from "../../../img/KirillBuilding_AnimationComposing_03.gif";
 export const AboutComponent: React.FC = () => {
+  const [active, setActice] = useState<boolean>(false);
+  console.log(active);
+
   return (
     <div className="about-component">
       <div className="about-container">
         <div className="text-composition">
+          <div className="container-absolute">
+            <div
+              className="bg-wrapp"
+              onMouseEnter={() => {
+                setActice(true);
+              }}
+              onMouseLeave={() => {
+                setActice(false);
+              }}
+            ></div>
+            <h2 className={`h2 ${active ? "white" : ""}`}>
+              ok,
+              <br />
+            </h2>
+            <h2 className={`h2-second ${active ? "white" : ""}`}>go!</h2>
+          </div>
           <div className="logo-about">
             <h1 className="h1">Курс</h1>
             <span>Revit</span>
