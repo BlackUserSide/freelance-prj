@@ -1,5 +1,6 @@
 import React from "react";
 import { AboutComponent } from "./About/AboutComponent";
+import { LastScreen } from "../LastScreen/LastScreen";
 import { Header } from "./Header";
 import { LearnPlan } from "./LearnPlan/LearnPlan";
 import { StudensWork } from "./StudensWork/StudensWork";
@@ -11,6 +12,7 @@ export const MainRavinPage: React.FC = () => {
       <AboutComponent />
       <LearnPlan />
       <StudensWork />
+      <LastScreen />
     </div>
   );
 };
