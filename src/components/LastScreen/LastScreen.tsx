@@ -10,12 +10,7 @@ import { useState } from "react";
 export const LastScreen: React.FC = () => {
   const [active, setActive] = useState<boolean>(false);
   const [image, setImage] = useState("");
-  const [dataImage, setDataImage] = useState<any[]>([
-    sert_1,
-    sert_2,
-    sert_3,
-    sert_4,
-  ]);
+  const [dataImage] = useState<any[]>([sert_1, sert_2, sert_3, sert_4]);
 
   const changeSert = (item: string) => {
     setActive(false);

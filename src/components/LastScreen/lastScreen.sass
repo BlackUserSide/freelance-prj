@@ -18,13 +18,13 @@
             height: 500px
     .bg-lock
         position: absolute
-        background-color: #212121   
+        background-color: #212121
         transform: skew(-15deg)
         z-index: 1
-        width: 859px
+        width: calc(100vw - 34.4%)
         height: 700px
         background-size: cover
-        right: 38%
+        right: 31%
         padding: 20px
         .text-composition
             width: 500px
@@ -56,7 +56,7 @@
 .sertificat-compostion
     position: absolute
     bottom: -10%
-    left: 24%
+    left: 40%
     .btn-sertificat
         width: 80px
         height: 80px
@@ -74,10 +74,10 @@
         img
             width: 100%
             height: 100%
-::-webkit-scrollbar 
+::-webkit-scrollbar
     width: 0px
     background: rgba(255, 255, 255, 0.0)
-       
+
 .pop-up
     position: absolute
     z-index: 9999
@@ -116,7 +116,7 @@
     left: 0
     width: 100%
     height: 100%
-    background-color: rgba(#000, .7)  
+    background-color: rgba(#000, .7)
 .pop-up-form-wrapper-sert
     position: relative
     width: 40%
@@ -131,17 +131,24 @@
     text-align: center
     padding: 30px 16px
     animation: opacityIn .3s ease-in-out forwards
-    border-radius: 5px  
+    border-radius: 5px
     img
         cursor: pointer
         width: 100%
-        height: 100%            
+        height: 100%
 
 @keyframes opacityIn
     0%
         opacity: 0
     50%
-        opacity: 0.5    
+        opacity: 0.5
     100%
         opacity: 1
-       
+@media screen and ( max-width:  1600px)
+    .last-screen .bg-lock
+        width: calc(100vw - 34.4%)
+        right: 36%
+@media screen and ( max-width:  1450px)
+    .last-screen .bg-lock
+        width: calc(100vw - 31.4%)
+        right: 39%

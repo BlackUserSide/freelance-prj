@@ -116,7 +116,7 @@
             .container-absolute
                 position: absolute
                 top: 20%
-                right: -12%
+                right: 0%
 
                 .bg-wrapp
                     width: 363px
@@ -188,10 +188,10 @@
             top: -180px
             .bg-lock
                 position: absolute
-                width: 1600px
+                width: calc(100vw - 17%)
                 background: #1E1E1E
                 transform: skew(-15deg)
-                right: -920px
+                right: -605px
                 top: -200px
                 height: 1160px
                 z-index: 11
@@ -209,7 +209,7 @@
     height: 1080px
     .bg-lock
         position: absolute
-        width: 900px
+        width: calc(100vw - 32%)
         background: #1E1E1E
         height: 1093px
         right: 5.1%
@@ -289,10 +289,10 @@
     padding-top: 25px
     .bg-lock
         position: absolute
-        width: 900px
+        width: calc(100vw - 32%)
         background: #1E1E1E
         height: 1093px
-        left: 16.425%
+        left: 12%
         top: 0
         transform: skew(-15deg)
         opacity: .989
@@ -308,13 +308,33 @@
             width: 328px
             font-size: 32px
     .image-controller
-        max-width: 1220px
+        max-width: 1380px
         position: relative
         z-index: 12
         position: absolute
         top: 40%
-        left: 48%
+        left: 50%
         margin-right: -50%
         transform: translate(-50%, -50%)
         img
             width: 100%
+@media screen and ( max-width: 1620px )
+    .about-component .about-container .animation-composition .bg-lock
+        width: calc(100vw - 12%)
+    .studens-work .bg-lock
+        width: calc(100vw - 32%)
+        left: 9%
+    .last-screen .bg-lock
+        width: calc(100vw - 34.4%)
+        right: 36%
+@media screen and ( max-width: 1450px )
+    .about-component .about-container .animation-composition .bg-lock
+        width: calc(100vw - 7%)
+    .studens-work .bg-lock
+        width: calc(100vw - 31%)
+        left: 6%
+    .last-screen .bg-lock
+        width: calc(100vw - 34.4%)
+        right: 36%
+    .learn-plan .bg-lock
+        width: calc(100vw - 31%)
