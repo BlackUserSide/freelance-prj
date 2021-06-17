@@ -2,17 +2,30 @@ import React from "react";
 import "./lastScreen.sass";
 import meneger from "../../img/meneger.png";
 import diplom from "../../img/diplom.png";
+import sert_1 from "../../img/sertifecate/sert_1.png";
+import sert_2 from "../../img/sertifecate/sert_2.png";
+import sert_3 from "../../img/sertifecate/sert_3.png";
+import sert_4 from "../../img/sertifecate/sert_4.png";
 import { useState } from "react";
 export const LastScreen: React.FC = () => {
   const [active, setActive] = useState<boolean>(false);
-  const [dataImage, setDataImage] = useState<any[]>([]);
-  const changeActiveHandler = () => {
-    if (active) {
-      setActive(false);
-      return;
-    }
-    setActive(true);
+  const [image, setImage] = useState("");
+  const [dataImage, setDataImage] = useState<any[]>([
+    sert_1,
+    sert_2,
+    sert_3,
+    sert_4,
+  ]);
+
+  const changeSert = (item: string) => {
+    setActive(false);
+    setImage(item);
   };
+
+  const changeActiveHandler = () => {
+    setActive((prev) => (prev ? false : true));
+  };
+
   return (
     <div className="last-screen">
       <div className="bg-lock">
@@ -62,6 +75,30 @@ export const LastScreen: React.FC = () => {
           </div>
         </div>
       </div>
+      {active ? (
+        <div className="pop-up">
+          <div className="pop-up-form-wrapper">
+            {dataImage.map((i: string, key: any) => {
+              return (
+                <div
+                  key={key}
+                  onClick={() => changeSert(i)}
+                  className="image-sert"
+                >
+                  <img key={key} src={i} alt="" />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+      {image !== "" ? (
+        <div onClick={() => setImage("")} className="pop-up-sert">
+          <div className="pop-up-form-wrapper-sert">
+            <img src={image} alt="" />
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };
