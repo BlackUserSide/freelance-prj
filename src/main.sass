@@ -7,6 +7,65 @@ body
 
 h1, h2,h3,h4,h5,h6,p
     margin: 0
+.container-absolut
+    width: 100%
+    position: absolute
+    z-index: 99
+    color: #fff
+    background: #1E1E1E
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    max-width: 100%
+    align-items: center
+    padding-bottom: 5px
+    padding-top: 5px
+    p
+        display: inline-block
+        text-align: right
+        padding: 15px 25px
+        background-color: #00F3F3
+        border-radius: 5px
+        cursor: pointer
+        color: #000
+        &:hover
+            background: #fff
+            color: #000
+    .hidden-list
+        position: absolute
+        background-color: #1E1E1E
+        top: -500%
+        right: 0
+        width: 80px
+        animation: fadeIn .3s ease-in-out forwards
+        ul
+            list-style-type: none
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            padding: 0
+            li
+                margin-bottom: 10px
+                padding: 10px 25px
+                background-color: #fff
+                color: #000
+                border-radius: 10px
+                cursor: pointer
+                &:hover
+                    background: #00F3F3
+                    color: #000
+@keyframes fadeIn
+    0%
+        top: -100%
+    50%
+        top: -50%
+        opacity: 1
+
+    100%
+        top: 100%
+        opacity: 1
+
 .fixed-container
     position: fixed
     bottom: 5%
@@ -266,6 +325,7 @@ h1, h2,h3,h4,h5,h6,p
                     cursor: pointer
                     left: -12%
                     transition: all .3s ease
+                    margin-bottom: 30px
                     &:hover
                         background: url('./img/mainCompose/bg1Active.png')
                         p

@@ -1,7 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import anim from "../../../img/KirillBuilding_AnimationComposing_03.gif";
-export const AboutComponent: React.FC = () => {
+type TProps = {
+  lang: any;
+};
+export const AboutComponent: React.FC<TProps> = ({ lang }) => {
   const [active, setActice] = useState<boolean>(false);
   console.log(active);
 
@@ -26,29 +29,29 @@ export const AboutComponent: React.FC = () => {
             <h2 className={`h2-second ${active ? "white" : ""}`}>go!</h2>
           </div>
           <div className="logo-about">
-            <h1 className="h1">Курс</h1>
+            <h1 className="h1">{lang.section[0].h}</h1>
             <span>Revit</span>
           </div>
           <div className="second-logo">
-            <h3 className="h3">Основи BIM моделювання</h3>
+            <h3 className="h3">{lang.section[1].h}</h3>
           </div>
           <div className="list-price">
             <ul>
               <li>
-                <h5 className="h5">Вартість</h5>
+                <h5 className="h5">{lang.section[2].li1}</h5>
                 <p>300 $</p>
               </li>
               <li>
-                <h5 className="h5">Підготовка</h5>
-                <p> рівень підготовки не важливий</p>
+                <h5 className="h5">{lang.section[2].li2}</h5>
+                <p> {lang.section[2].li2_p}</p>
               </li>
               <li>
-                <h5 className="h5">Формат</h5>
-                <p>онлайн/офлайн</p>
+                <h5 className="h5">{lang.section[2].li3}</h5>
+                <p>{lang.section[2].li3_p}</p>
               </li>
               <li>
-                <h5 className="h5">Підтримка</h5>
-                <p>24/7 в телеграм чаті</p>
+                <h5 className="h5">{lang.section[2].li4}</h5>
+                <p>{lang.section[2].li4_p}</p>
               </li>
             </ul>
           </div>

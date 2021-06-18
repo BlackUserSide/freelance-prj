@@ -7,7 +7,10 @@ import sert_2 from "../../img/sertifecate/sert_2.png";
 import sert_3 from "../../img/sertifecate/sert_3.png";
 import sert_4 from "../../img/sertifecate/sert_4.png";
 import { useState } from "react";
-export const LastScreen: React.FC = () => {
+type TProps = {
+  lang: any;
+};
+export const LastScreen: React.FC<TProps> = ({ lang }) => {
   const [active, setActive] = useState<boolean>(false);
   const [image, setImage] = useState("");
   const [dataImage] = useState<any[]>([sert_1, sert_2, sert_3, sert_4]);
@@ -27,36 +30,30 @@ export const LastScreen: React.FC = () => {
         <div className="text-composition">
           <ul>
             <li>
-              <h2>Куратор курсу</h2>
-              <h1>Кирил Обертович</h1>
+              <h2>{lang.section[5].h}</h2>
+              <h1>{lang.section[5].h}</h1>
               <div className="line"></div>
             </li>
             <li>
               <p>
-                - співзасновник програми навчання
-                <span>Let’s BIMprove</span>;
+                - {lang.section[5].li_1}
+                <span>{lang.section[5].li1_span}</span>
+              </p>{" "}
+            </li>
+            <li>
+              <p>
+                - <span>{lang.section[5].li2_span}</span> {lang.section[5].li2};
               </p>
             </li>
             <li>
               <p>
-                - <span>дійсний BIM менеджер</span> компанії BIMprove з 5-річним
-                досвідом;
+                - {lang.section[5].li3}
+                <span> {lang.section[5].li3_span}</span>;
               </p>
             </li>
             <li>
               <p>
-                - сертифікований викладач
-                <span> Autodesk</span>;
-              </p>
-            </li>
-            <li>
-              <p>
-                - працював з ведучими компаніями{" "}
-                <span>
-                  Франції,
-                  <br />
-                  Австралії, Англії та Латвії;
-                </span>
+                - {lang.section[5].li4} <span>{lang.section[5].li4_span}</span>
               </p>
             </li>
           </ul>
